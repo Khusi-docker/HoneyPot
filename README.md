@@ -46,10 +46,6 @@ To protect IoT devices by:
 ### ✔️ Honeypot Redirection
 - Redirects suspicious users to Hiotpot/HoneyIoT4  
 - Collects logs safely for analysis
-  
-This shows the decision flow:
-- If a request fails *any* security check → attacker is redirected into **Hiotpot or HoneyIoT4 honeypot**.
-- Only fully clean and authenticated traffic reaches the IoT device.
 
 <img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/11c0ef97-d334-4533-96fa-9ba9c72908b6" />
 
