@@ -2,8 +2,6 @@
 
 This project provides a security framework for IoT devices to detect unauthorized users and redirect them to a honeypot. It performs IP spoofing checks, authentication validation, malware detection, and scan detection to ensure only authorized access is allowed. The system uses **Hiotpot** and **HoneyIoT4** architectures to detect threats and divert attackers into a controlled environment.
 
----
-
 <h2>🔒 Project Objective</h2>
 
 To protect IoT devices by:
@@ -13,8 +11,6 @@ To protect IoT devices by:
 - Detecting malware payloads
 - Detecting scanning and reconnaissance
 - Redirecting attackers into the honeypot
-
----
 
 <h2>🏗 Architecture Used</h2>
 
@@ -49,4 +45,12 @@ To protect IoT devices by:
 
 ### ✔️ Honeypot Redirection
 - Redirects suspicious users to Hiotpot/HoneyIoT4  
-- Collects logs safely for analysis  
+- Collects logs safely for analysis
+  
+This shows the decision flow:
+- If a request fails *any* security check → attacker is redirected into **Hiotpot or HoneyIoT4 honeypot**.
+- Only fully clean and authenticated traffic reaches the IoT device.
+
+<img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/11c0ef97-d334-4533-96fa-9ba9c72908b6" />
+
+
