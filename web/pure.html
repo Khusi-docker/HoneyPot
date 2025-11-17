@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhiVault CC-CAM</title>
+<style>
+  /* Global Dark Theme */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at center, #050505 0%, #000 100%);
+    color: #00f0ff;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 18px 10px;
+    background: linear-gradient(90deg, #00f0ff, #0072ff);
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00f0ff;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  }
+
+  /* Grid Layout */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 16px;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(0,255,255,0.02) 0px,
+      rgba(0,255,255,0.02) 1px,
+      rgba(0,255,255,0) 1px,
+      rgba(0,255,255,0) 10px
+    );
+  }
+
+  /* Camera Frame */
+  .camera {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #050505;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2), inset 0 0 10px rgba(0,255,255,0.1);
+    aspect-ratio: 16/9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .camera:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(0,255,255,0.4);
+  }
+
+  /* Video iframe */
+  .camera iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: brightness(0.9) contrast(1.1) saturate(1.2);
+  }
+
+  /* Screen Glare Overlay */
+  .camera::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Label */
+  .label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid rgba(0,255,255,0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #00ffff;
+    text-shadow: 0 0 6px #00ffff;
+  }
+
+  /* Blinking recording indicator */
+  .recording {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #ff0033;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #ff0033;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 12px;
+    background: linear-gradient(90deg, #0072ff, #00f0ff);
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #00f0ff;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) { .container { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) { .container { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .container { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="header">CC-CAM LIVE SURVEILLANCE GRID</div>
+
+<div class="container">
+  <!-- 1 -->
+  <div class="camera">
+    <div class="label">Tower Of Peace</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/73-EekdVVU8?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 2 -->
+  <div class="camera">
+    <div class="label">Baba Room</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/mCT5dMOdDC0?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 3 -->
+  <div class="camera">
+    <div class="label">History Hall</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/rnXIjl_Rzy4?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 4 -->
+  <div class="camera">
+    <div class="label">Earth from Space</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/fO9e9jnhYK8?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 5 -->
+  <div class="camera">
+    <div class="label">City Skyline</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/-esQ-A5ZBCM?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 6 -->
+  <div class="camera">
+    <div class="label">Ocean View</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/u4UZ4UvZXrg?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 7 -->
+  <div class="camera">
+    <div class="label">Camera 7</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/1EiC9bvVGnk?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 8 -->
+  <div class="camera">
+    <div class="label">Camera 8</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/NscyTzvTjHE?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 9 -->
+  <div class="camera">
+    <div class="label">Camera 9</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/gFRtAAmiFbE?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 10 -->
+  <div class="camera">
+    <div class="label">Camera 10</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/p0Qhe4vhYLQ?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 11 -->
+  <div class="camera">
+    <div class="label">Camera 11</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/yJgfAV8lXyI?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- 12 -->
+  <div class="camera">
+    <div class="label">Camera 12</div>
+    <div class="recording"></div>
+    <iframe src="https://www.youtube.com/embed/lDUm73kwch0?autoplay=1&mute=1&loop=1&controls=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="footer">PhiVault CC-CAM | Secure AI Surveillance Grid</div>
+
+</body>
+</html>

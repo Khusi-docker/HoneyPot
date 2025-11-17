@@ -1,0 +1,151 @@
+<!-- Updated Ollama error page with real lamb logo placeholder and new light theme -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ollama — Error</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family:Inter, sans-serif;
+      background:#f5f7fa;
+      color:#222;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:20px;
+    }
+    .card{
+      background:white;
+      width:100%;
+      max-width:850px;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.1);
+      display:grid;
+      grid-template-columns:160px 1fr;
+      gap:30px;
+      align-items:center;
+    }
+    .logo-wrap{
+      text-align:center;
+    }
+    .logo{
+      width:150px;
+      transition:transform .3s ease;
+      cursor:pointer;
+    }
+    .logo:hover{
+      transform:scale(1.05) rotate(-2deg);
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      font-weight:700;
+    }
+    .sub{
+      color:#666;
+      margin-top:8px;
+      font-size:14px;
+    }
+    .solutions{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .sol{
+      background:#f1f3f6;
+      padding:14px;
+      border-radius:12px;
+      min-width:230px;
+      flex:1 1 250px;
+    }
+    .sol h3{
+      margin:0 0 6px;
+      font-size:15px;
+    }
+    .sol p{
+      margin:0;
+      font-size:13px;
+      color:#444;
+    }
+    .actions{
+      margin-top:22px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+      font-size:14px;
+    }
+    .btn-primary{
+      background:#0072ff;
+      color:white;
+    }
+    .btn-ghost{
+      background:#e9ecf1;
+      color:#333;
+    }
+    footer{
+      margin-top:16px;
+      color:#666;
+      font-size:13px;
+    }
+    @media(max-width:700px){
+      .card{grid-template-columns:1fr;text-align:center}
+      .logo{width:130px;margin:auto;}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo-wrap">
+      <!-- Replace this with the actual lamb logo URL when available -->
+      <img src="https://i-blog.csdnimg.cn/img_convert/c5bc514667ee1af9aed5bfae2964a014.png" class="logo" alt="Ollama Logo">
+    </div>
+
+    <div class="content">
+      <h1>Ollama Error</h1>
+      <div class="sub">Something went wrong while processing your request.</div>
+
+      <div class="solutions">
+        <div class="sol"><h3>1. Check server connection</h3><p>Ensure the Ollama server is reachable and the port is open.</p></div>
+        <div class="sol"><h3>2. Verify API Key</h3><p>Confirm the key exists, is valid, and not expired.</p></div>
+        <div class="sol"><h3>3. Validate model name</h3><p>Check for typos or unavailable models.</p></div>
+        <div class="sol"><h3>4. Rate limits</h3><p>Ensure your request quota is not exhausted.</p></div>
+        <div class="sol"><h3>5. Payload format</h3><p>Large or malformed JSON prompts may fail.</p></div>
+        <div class="sol"><h3>6. Read logs</h3><p>Inspect the server logs for detailed errors.</p></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" onclick="location.href='mailto:2201020495@cgu-odisha.ac.in?subject=Ollama%20Error%20Report&body=Describe%20the%20issue%20here.'">Contact Admin</button>
+        <button class="btn btn-ghost" onclick="copyChecklist()">Copy Checklist</button>
+      </div>
+
+      <footer>Include the full error text when reporting — it speeds up fixes.</footer>
+    </div>
+  </div>
+
+<script>
+function copyChecklist(){
+  const t=`Ollama troubleshooting checklist:
+- Check server connection
+- Validate API key
+- Confirm model name
+- Check rate limits
+- Validate JSON payload
+- Review logs`;
+  navigator.clipboard.writeText(t).then(()=>alert('Copied!'));
+}
+</script>
+</body>
+</html>
