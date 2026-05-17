@@ -49,6 +49,10 @@ To protect IoT devices by:
 
 
 ### Decision Flow
-<img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/11c0ef97-d334-4533-96fa-9ba9c72908b6" />
+<img width="1186" height="676" alt="Screenshot 2026-02-21 022621" src="https://github.com/user-attachments/assets/6043fd7f-98e2-491f-89b1-efeeaadc8f4d" />
+
+### Individual Features Flow
+<img width="910" height="362" alt="Screenshot 2026-05-17 135741" src="https://github.com/user-attachments/assets/5654b385-aecd-41ae-bbba-0f86da1a168e" />
+
 
 
